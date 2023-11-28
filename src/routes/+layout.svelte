@@ -26,8 +26,28 @@
 							</a>
 						</li>
 						<li>
-							<a href="Services">
-								<span class="flex-auto">Services</span>
+							<a href="/professionals">
+								<span class="flex-auto">Professionals</span>
+							</a>
+						</li>
+						<li>
+							<a href="/families">
+								<span class="flex-auto">Families</span>
+							</a>
+						</li>
+						<li>
+							<a href="/events">
+								<span class="flex-auto">Upcoming Events</span>
+							</a>
+						</li>
+						<li>
+							<a href="/volunteer">
+								<span class="flex-auto">Volunteer</span>
+							</a>
+						</li>
+						<li>
+							<a href="/contact">
+								<span class="flex-auto">Contact Us</span>
 							</a>
 						</li>
 					</ul>
