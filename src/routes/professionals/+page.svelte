@@ -1,0 +1,51 @@
+<script>
+	import EventsPanel from '$lib/components/EventsPanel.svelte';
+	import bkLogo from '$lib/assets/bk_logo.png';
+</script>
+
+<section class="w-full bg-cover min-h-[30rem] bg-[url($lib/assets/design/professionals-background.png)]">
+	<div class="relative">
+		<img class="absolute h-80 top-12" src="$lib/assets/design/squiggle-1.png" alt="" />
+		<img class="absolute h-80 right-0" src="$lib/assets/design/squiggle-2.png" alt="" />
+	</div>
+	<div class="flex flex-row justify-around p-12 w-full">
+		<div class="w-[25rem]">
+			<EventsPanel
+				events={[
+					{
+						id: '123',
+						date: '12/12/2021',
+						title: 'Event 1',
+						description: 'This is a description',
+						imageSrc: bkLogo
+					},
+					{
+						id: '234',
+						date: '12/12/2021',
+						title: 'Event 2',
+						description: 'This is a description',
+						imageSrc: bkLogo
+					}
+				]}
+				title="Professional Training"
+				description="We offer a wide selection of training sessions! Check out our schedule below and contact us for more details"
+			/>
+		</div>
+		<div class="flex flex-col gap-8 items-end">
+			<div class="card p-4 bg-white w-[35rem] h-fit">
+				<h1 class="h3 text-primary-500 text-center font-bold">Join the club</h1>
+				<p class="text-xl w-full text-center">
+					Our brand new professional membership offers exclusive access to new products and services! To learn more,
+					click here.
+				</p>
+			</div>
+			<div class="card p-4 bg-white w-[35rem] h-fit mr-20">
+				<h1 class="h3 text-primary-500 text-center font-bold">Work with us</h1>
+				<p class="text-xl w-full text-center">
+					Are you looking to offer professional services to our clients? We're always looking for more content and
+					talent. Reach out to us by filling out this form, and we'll be in touch!
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

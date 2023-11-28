@@ -6,11 +6,16 @@
 		date: string;
 		imageSrc: string;
 	}>;
+	export let title = 'Featured Events';
+	export let description = '';
 </script>
 
 <div class="bg-white shadow-md rounded-lg p-4">
-	<h2 class="text-xl mb-2 text-center text-primary-500 font-bold">Featured Events</h2>
+	<h2 class="text-xl mb-2 text-center text-primary-500 font-bold">{title}</h2>
 	<img class="mx-auto w-44 mb-2" src="$lib/assets/design/purple_underline.png" aria-hidden alt="" />
+	{#if description}
+		<p class="text-center text-gray-600 mb-4">{description}</p>
+	{/if}
 	<div class="grid grid-cols-1 gap-2">
 		{#each events as event}
 			<div class="flex items-center p-2 border rounded-lg">

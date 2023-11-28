@@ -14,8 +14,10 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<!-- TODO: Get higher res logo -->
-				<img src="$lib/assets/bk_logo.png" alt="the BirthKuwait Logo" />
+				<a href="/">
+					<!-- TODO: Get higher res logo -->
+					<img src="$lib/assets/bk_logo.png" alt="the BirthKuwait Logo" />
+				</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<nav class="list-nav">
@@ -57,4 +59,17 @@
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<slot />
+	<svelte:fragment slot="pageFooter">
+		<div class="w-full bg-neutral-100 h-32 p-4">
+			<div class="w-5/6 mx-auto">
+				<div class="flex flex-row justify-between">
+					<img class="w-40" src="$lib/assets/bk_logo.png" alt="the BirthKuwait Logo" />
+					<img class="h-8" src="$lib/assets/design/social-icons.png" alt="Social Media Icons" />
+					<div class="w-40" />
+				</div>
+				<hr class="border-neutral-200 divider my-2" />
+				<p class="text-slate-400 text-center">© 2022 Birth Kuwait, Inc.</p>
+			</div>
+		</div>
+	</svelte:fragment>
 </AppShell>
