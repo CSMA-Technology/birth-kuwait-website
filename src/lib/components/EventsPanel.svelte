@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Card from './Card.svelte';
+
 	export let events: Array<{
 		id: string;
 		title: string;
@@ -10,9 +12,8 @@
 	export let description = '';
 </script>
 
-<div class="bg-white shadow-md rounded-lg p-4">
-	<h2 class="text-xl mb-2 text-center text-primary-500 font-bold">{title}</h2>
-	<img class="mx-auto w-44 mb-2" src="$lib/assets/design/purple_underline.png" aria-hidden alt="" />
+<Card underline>
+	<h2 slot="header" class="h3 mb-2 text-center text-primary-500 font-bold">{title}</h2>
 	{#if description}
 		<p class="text-center text-gray-600 mb-4">{description}</p>
 	{/if}
@@ -35,7 +36,7 @@
 			</div>
 		{/each}
 	</div>
-</div>
+</Card>
 
 <style>
 	/* Add custom styles or override Tailwind styles here if needed */

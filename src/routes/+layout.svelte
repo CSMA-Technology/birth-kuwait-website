@@ -7,6 +7,7 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
+	$: activePage = $page.route.id;
 
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
@@ -25,36 +26,13 @@
 			<svelte:fragment slot="trail">
 				<nav class="list-nav">
 					<ul class="flex flex-row align-bottom [&>li]:!mt-0">
-						<li>
-							<a href="/about">
-								<span class="flex-auto">About</span>
-							</a>
-						</li>
-						<li>
-							<a href="/professionals">
-								<span class="flex-auto">Professionals</span>
-							</a>
-						</li>
-						<li>
-							<a href="/families">
-								<span class="flex-auto">Families</span>
-							</a>
-						</li>
-						<li>
-							<a href="/events">
-								<span class="flex-auto">Upcoming Events</span>
-							</a>
-						</li>
-						<li>
-							<a href="/volunteer">
-								<span class="flex-auto">Volunteer</span>
-							</a>
-						</li>
-						<li>
-							<a href="/contact">
-								<span class="flex-auto">Contact Us</span>
-							</a>
-						</li>
+						{#each [{ name: 'About', href: '/about' }, { name: 'Professionals', href: '/professionals' }, { name: 'Families', href: '/families' }, { name: 'Upcoming Events', href: '/events' }, { name: 'Volunteer', href: '/volunteer' }, { name: 'Contact Us', href: '/contact' }] as { name, href }}
+							<li>
+								<a {href}>
+									<span class:active={activePage === href} class="flex-auto">{name}</span>
+								</a>
+							</li>
+						{/each}
 					</ul>
 				</nav>
 			</svelte:fragment>
@@ -80,3 +58,20 @@
 		</div>
 	</svelte:fragment>
 </AppShell>
+
+<style>
+	.active {
+		position: relative;
+	}
+
+	.active::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -6px;
+		width: 100%;
+		height: 7px;
+		background: url('$lib/assets/design/purple_underline.png') no-repeat;
+		background-size: 100% 100%;
+	}
+</style>

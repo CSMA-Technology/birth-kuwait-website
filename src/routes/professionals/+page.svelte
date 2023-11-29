@@ -1,6 +1,7 @@
 <script>
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
 	import bkLogo from '$lib/assets/bk_logo.png';
+	import Card from '$lib/components/Card.svelte';
 </script>
 
 <section class="w-full bg-cover min-h-[30rem] bg-[url($lib/assets/design/professionals-background.png)]">
@@ -32,20 +33,20 @@
 			/>
 		</div>
 		<div class="flex flex-col gap-8 items-end">
-			<div class="card p-4 bg-white w-[35rem] h-fit">
-				<h1 class="h3 text-primary-500 text-center font-bold">Join the club</h1>
+			<Card underline class="w-[35rem] h-fit">
+				<h1 slot="header" class="h3 text-primary-500 text-center font-bold">Join the club</h1>
 				<p class="text-xl w-full text-center">
 					Our brand new professional membership offers exclusive access to new products and services! To learn more,
 					click here.
 				</p>
-			</div>
-			<div class="card p-4 bg-white w-[35rem] h-fit mr-20">
-				<h1 class="h3 text-primary-500 text-center font-bold">Work with us</h1>
+			</Card>
+			<Card underline class="w-[35rem] h-fit mr-20">
+				<h1 slot="header" class="h3 text-primary-500 text-center font-bold">Work with us</h1>
 				<p class="text-xl w-full text-center">
 					Are you looking to offer professional services to our clients? We're always looking for more content and
 					talent. Reach out to us by filling out this form, and we'll be in touch!
 				</p>
-			</div>
+			</Card>
 		</div>
 	</div>
 </section>

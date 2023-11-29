@@ -1,10 +1,14 @@
+<script>
+	import Card from '$lib/components/Card.svelte';
+</script>
+
 <section class="w-full bg-primary-400">
 	<div class="relative">
 		<img class="absolute h-80 top-12" src="$lib/assets/design/squiggle-1.png" alt="" />
 		<img class="absolute h-80 right-0" src="$lib/assets/design/squiggle-2.png" alt="" />
 	</div>
 	<div class="w-full justify-evenly flex flex-row p-10">
-		<div class="card p-6 w-[35rem] bg-white/30">
+		<Card class="card p-6 w-[35rem] bg-white/30">
 			<h2 class="h2 font-bold text-gray-600">Get in touch</h2>
 			<form>
 				<label class="label mt-3">
@@ -20,7 +24,7 @@
 					<textarea class="textarea" name="message" />
 				</label>
 			</form>
-		</div>
+		</Card>
 		<div class="relative">
 			<div class="absolute -left-28 top-20">
 				<p class="bg-white text-primary-500 text-lg font-bold rounded-2xl w-fit py-1.5 px-3 rounded-br-none shadow-md">
@@ -34,7 +38,7 @@
 </section>
 <section class="py-4 bg-[url($lib/assets/design/three-bubbles.png)] bg-cover">
 	<div class="my-8 max-w-3xl mx-auto">
-		<h1 class="h2 text-center my-4 font-bold text-primary-500">Get in touch any time</h1>
+		<h1 class="h2 text-center my-4 font-bold text-primary-500">Reach out any time</h1>
 		<p>
 			Reprehenderit sunt commodo velit ut laboris veniam aute elit dolore. Esse fugiat non dolor pariatur quis aute
 			officia eiusmod Lorem.Esse commodo deserunt anim non exercitation magna consectetur duis commodo ut culpa.

@@ -1,17 +1,18 @@
 <script>
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
 	import bkLogo from '$lib/assets/bk_logo.png';
+	import Card from '$lib/components/Card.svelte';
 </script>
 
 <section class="w-full h-full bg-cover bg-[url($lib/assets/design/families-background.png)]">
 	<div class="flex flex-row flex-wrap w-full p-8 justify-around gap-8">
-		<div class="card bg-white w-[40rem] p-6">
-			<h2 class="h2 mb-2 font-bold text-primary-500 text-center">Ready to talk?</h2>
+		<Card underline class="w-[40rem] ">
+			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Ready to talk?</h2>
 			<p class="text-xl">Consultations are available every week. Use the calendar below to schedule yours today.</p>
 			<div class="text-center mt-4 w-full h-44 bg-gray-400">Booking calendar goes here</div>
-		</div>
-		<div class="card h-fit bg-white w-[40rem] p-6">
-			<h2 class="h2 mb-2 font-bold text-primary-500 text-center">Our facilities</h2>
+		</Card>
+		<Card underline class="card h-fit bg-white w-[40rem] p-6">
+			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Our facilities</h2>
 			<div class="flex flex-row">
 				<div class="w-2/3">
 					<p class="text-xl">
@@ -24,7 +25,7 @@
 					<img class="w-full" src="$lib/assets/stock/lounge.png" alt="Our facilities" />
 				</div>
 			</div>
-		</div>
+		</Card>
 		<div class="w-[25rem]">
 			<EventsPanel
 				title="Free Lectures"
