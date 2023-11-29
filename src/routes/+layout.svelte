@@ -5,6 +5,9 @@
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
+	import { fade } from 'svelte/transition';
+	import { page } from '$app/stores';
+
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
@@ -58,7 +61,11 @@
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
-	<slot />
+	{#key $page}
+		<div in:fade={{ duration: 400 }}>
+			<slot />
+		</div>
+	{/key}
 	<svelte:fragment slot="pageFooter">
 		<div class="w-full bg-neutral-100 h-32 p-4">
 			<div class="w-5/6 mx-auto">
