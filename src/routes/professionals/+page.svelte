@@ -1,6 +1,6 @@
 <script>
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
-	import bkLogo from '$lib/assets/bk_logo.png';
+	import bkLogo from '$lib/assets/bk_logo.jpeg';
 	import Card from '$lib/components/Card.svelte';
 </script>
 

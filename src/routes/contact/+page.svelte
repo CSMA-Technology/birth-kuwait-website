@@ -1,6 +1,18 @@
 <script>
 	import Card from '$lib/components/Card.svelte';
+	import { fade } from 'svelte/transition';
 </script>
+
+<!-- Decorations container For Large Screens -->
+<div class="hidden md:block relative w-full left-0 top-0">
+	<div in:fade>
+		<img src="$lib/assets/design/Doodle-1.png" class="absolute opacity-90 w-16 top-44 left-10" alt="" aria-hidden />
+		<img src="$lib/assets/design/Doodle-2.png" class="absolute opacity-90 w-20 -top-5 left-1/4" alt="" aria-hidden />
+		<img src="$lib/assets/design/Doodle-3.png" class="absolute opacity-90 w-16 top-48 right-32" alt="" aria-hidden />
+		<img src="$lib/assets/design/Doodle-4.png" class="absolute opacity-90 w-16 top-60 right-1/3" alt="" aria-hidden />
+		<img src="$lib/assets/design/Doodle-4.png" class="absolute opacity-90 w-24 top-96 left-1/3" alt="" aria-hidden />
+	</div>
+</div>
 
 <section class="w-full bg-primary-400">
 	<div class="relative">

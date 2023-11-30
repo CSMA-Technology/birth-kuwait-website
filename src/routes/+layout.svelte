@@ -5,11 +5,23 @@
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
-	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
+	import { onNavigate } from '$app/navigation';
 	$: activePage = $page.route.id;
-
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	// This creates a cross-fade between pages. As of this writing it is only supported in Chrome, other browsers will simply have no page transition.
+	// https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API#browser_compatibility
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <!-- App Shell -->
@@ -20,7 +32,7 @@
 			<svelte:fragment slot="lead">
 				<a href="/">
 					<!-- TODO: Get higher res logo -->
-					<img src="$lib/assets/bk_logo.png" alt="the BirthKuwait Logo" />
+					<img class="h-14" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
 				</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
@@ -39,18 +51,19 @@
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
-	{#key $page}
-		<div in:fade={{ duration: 400 }}>
-			<slot />
-		</div>
-	{/key}
+	<slot />
 	<svelte:fragment slot="pageFooter">
 		<div class="w-full bg-neutral-100 h-32 p-4">
 			<div class="w-5/6 mx-auto">
-				<div class="flex flex-row justify-between">
-					<img class="w-40" src="$lib/assets/bk_logo.png" alt="the BirthKuwait Logo" />
-					<img class="h-8" src="$lib/assets/design/social-icons.png" alt="Social Media Icons" />
+				<div class="flex flex-row justify-between items-center">
 					<div class="w-40" />
+					<div class="flex flex-row gap-1 h-8">
+						<img class="p-1" src="$lib/assets/design/icons/instagram-icon.png" alt="Instagram Logo" />
+						<img class="p-1" src="$lib/assets/design/icons/facebook-round-color-icon.png" alt="Facebook Logo" />
+						<img class="p-1" src="$lib/assets/design/icons/linkedin-icon.png" alt="LinkedIn Logo" />
+						<img class="p-1" src="$lib/assets/design/icons/youtube-color-icon.png" alt="Youtube Logo" />
+					</div>
+					<img class="w-40" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
 				</div>
 				<hr class="border-neutral-200 divider my-2" />
 				<p class="text-slate-400 text-center">© 2022 Birth Kuwait, Inc.</p>

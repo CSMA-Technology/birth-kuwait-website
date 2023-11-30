@@ -1,7 +1,7 @@
 <script>
 	import Bubble from '$lib/components/Bubble.svelte';
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
-	import bkLogo from '$lib/assets/bk_logo.png';
+	import bkLogo from '$lib/assets/bk_logo.jpeg';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import ServiceCard from '$lib/components/ServiceCard.svelte';
@@ -80,30 +80,30 @@
 			<h2 class="h3 text-primary-500 my-2 font-bold">One-on-One Consultation</h2>
 			<div class="flex flex-row w-full justify-between">
 				<p>Labore proident nisi fugiat nostrud sint mollit aliqua ipsum ad veniam cupidatat</p>
-				<img class="h-28" src="$lib/assets/design/pregnant-outline.png" alt="" />
+				<img class="w-16 h-fit" src="$lib/assets/design/pregnant-outline.png" alt="" />
 			</div>
 		</ServiceCard>
 		<ServiceCard class="w-96 p-6 grow-[2]">
 			<h2 class="h3 text-bkBlue my-2 font-bold">Group Classes</h2>
 			<div class="flex flex-row w-full justify-between">
-				<p>Labore proident nisi fugiat nostrud sint mollit aliqua ipsum ad veniam cupidatat</p>
-				<img class="h-28" src="$lib/assets/design/baby-outline-2.png" alt="" />
+				<p>Labore proident nisi fugiat nostrud sint mollit aliqua ipsum ad veniam cupidata</p>
+				<img class="w-24 h-fit relative -bottom-10" src="$lib/assets/design/baby-outline-2.png" alt="" />
 			</div>
 		</ServiceCard>
 	</div>
 	<div class="flex flex-row flex-wrap mx-8 gap-4 mt-4">
 		<ServiceCard class="w-96 p-6 grow-[2]">
-			<h2 class="h3 text-bkGreen my-2 font-bold">Virtual Care1</h2>
+			<h2 class="h3 text-bkGreen my-2 font-bold">Virtual Care</h2>
 			<div class="flex flex-row w-full justify-between">
 				<p>Labore proident nisi fugiat nostrud sint mollit aliqua ipsum ad veniam cupidatat</p>
-				<img class="h-28" src="$lib/assets/design/baby-outline-1.png" alt="" />
+				<img class="w-16 h-fit" src="$lib/assets/design/baby-outline-1.png" alt="" />
 			</div>
 		</ServiceCard>
 		<ServiceCard class="w-96 p-6 grow-[1]">
-			<h2 class="h3 text-bkPink my-2 font-bold">Find a Doula1</h2>
+			<h2 class="h3 text-bkPink my-2 font-bold">Find a Doula</h2>
 			<div class="flex flex-row w-full justify-between">
 				<p>Labore proident nisi fugiat nostrud sint mollit aliqua ipsum ad veniam cupidatat</p>
-				<img class="h-28" src="$lib/assets/design/mother-outline.png" alt="" />
+				<img class="w-16 h-fit relative -bottom-10" src="$lib/assets/design/mother-outline.png" alt="" />
 			</div>
 		</ServiceCard>
 	</div>
