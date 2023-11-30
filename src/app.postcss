@@ -11,3 +11,28 @@ body {
 ::-webkit-scrollbar-thumb {
 	background-color: rgb(var(--color-primary-400));
 }
+
+@font-face {
+	/* Reference name */
+	font-family: 'Abeat';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/abeatbykai.otf');
+}
+@font-face {
+	/* Reference name */
+	font-family: 'A Jannat LT Regular';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/ajannatlt.ttf');
+}
+@font-face {
+	/* Reference name */
+	font-family: 'GE Flow Regular';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/geflowregular.ttf');
+}
+
+:root [data-theme='birthKuwait'] {
+	--theme-font-family-base: 'A Jannat LT Regular', sans-serif;
+	--theme-font-family-heading: 'Abeat', serif;
+	/* ... */
+}

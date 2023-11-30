@@ -13,7 +13,7 @@
 </script>
 
 <Card underline>
-	<h2 slot="header" class="h3 mb-2 text-center text-primary-500 font-bold">{title}</h2>
+	<h2 slot="header" class="h3 mb-1 text-center text-primary-500 font-bold">{title}</h2>
 	{#if description}
 		<p class="text-center text-gray-600 mb-4">{description}</p>
 	{/if}
