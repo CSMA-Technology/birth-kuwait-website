@@ -22,33 +22,54 @@
 			});
 		});
 	});
+
+	let isMenuOpen = false;
+	const toggleMenu = () => {
+		isMenuOpen = !isMenuOpen;
+	};
 </script>
 
 <!-- App Shell -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <AppShell>
 	<svelte:fragment slot="pageHeader">
 		<!-- App Bar -->
-		<AppBar>
-			<svelte:fragment slot="lead">
-				<a href="/">
-					<!-- TODO: Get higher res logo -->
-					<img class="h-14" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
-				</a>
-			</svelte:fragment>
-			<svelte:fragment slot="trail">
-				<nav class="list-nav">
-					<ul class="flex flex-row align-bottom [&>li]:!mt-0">
-						{#each [{ name: 'About', href: '/about' }, { name: 'Professionals', href: '/professionals' }, { name: 'Families', href: '/families' }, { name: 'Upcoming Events', href: '/events' }, { name: 'Volunteer', href: '/volunteer' }, { name: 'Contact Us', href: '/contact' }] as { name, href }}
-							<li>
-								<a {href}>
-									<span class:active={activePage === href} class="flex-auto">{name}</span>
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</nav>
-			</svelte:fragment>
-		</AppBar>
+		<div class="relative">
+			<AppBar>
+				<svelte:fragment slot="lead">
+					<a href="/">
+						<!-- TODO: Get higher res logo -->
+						<img class="h-14" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
+					</a>
+				</svelte:fragment>
+				<svelte:fragment slot="trail">
+					<nav class="list-nav">
+						<ul
+							class={`flex flex-row align-bottom [&>li]:!mt-0 z-10 transition-all duration-500 ease-in-out
+							max-md:flex-col max-md:absolute left-0 max-md:mt-14 max-md:w-full max-md:bg-white
+							${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'} md:!visible md:!opacity-100`}
+							on:click={toggleMenu}
+							on:keypress={toggleMenu}
+						>
+							{#each [{ name: 'About', href: '/about' }, { name: 'Professionals', href: '/professionals' }, { name: 'Families', href: '/families' }, { name: 'Upcoming Events', href: '/events' }, { name: 'Volunteer', href: '/volunteer' }, { name: 'Contact Us', href: '/contact' }] as { name, href }}
+								<li>
+									<a {href}>
+										<span class:active={activePage === href} class="flex-auto">{name}</span>
+									</a>
+								</li>
+							{/each}
+						</ul>
+						<button on:click={toggleMenu} class="z-20 !bg-transparent relative md:!hidden">
+							{#if !isMenuOpen}
+								<img src="$lib/assets/design/icons/hamburger-menu.png" alt="" />
+							{:else}
+								<img src="$lib/assets/design/icons/close.png" alt="" />
+							{/if}
+						</button>
+					</nav>
+				</svelte:fragment>
+			</AppBar>
+		</div>
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<slot />
@@ -86,5 +107,6 @@
 		height: 7px;
 		background: url('$lib/assets/design/purple_underline.png') no-repeat;
 		background-size: 100% 100%;
+		max-width: 7rem;
 	}
 </style>

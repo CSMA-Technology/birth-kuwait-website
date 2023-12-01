@@ -74,7 +74,7 @@
 	</div>
 </section>
 <section>
-	<h1 class="h1 text-center my-4">What We Offer</h1>
+	<h1 class="h1 text-center mt-6 mb-4">What We Offer</h1>
 	<div class="flex flex-row flex-wrap mx-8 gap-4">
 		<ServiceCard class="w-96 p-6 grow-[1]">
 			<h2 class="h3 text-primary-500 my-2 font-bold">One-on-One Consultation</h2>
