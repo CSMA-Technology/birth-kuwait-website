@@ -12,7 +12,7 @@
 </script>
 
 <!-- Decorations container For Large Screens -->
-<div class="hidden md:block relative w-full left-0 top-0">
+<div class="max-md:hidden relative w-full left-0 top-0">
 	{#if mounted}
 		<div in:fade>
 			<img src="$lib/assets/design/Doodle-1.png" class="absolute opacity-90 w-16 top-44 left-10" alt="" aria-hidden />
@@ -33,7 +33,8 @@
 	</Bubble>
 </div>
 <section
-	class="px-5 pt-16 pb-16 bg-primary-400 z-0 bg-[url('$lib/assets/stock/mother-4.png')] bg-cover bg-blend-multiply"
+	class="px-5 pt-16 pb-16 bg-primary-400 z-0 md:bg-[url('$lib/assets/stock/mother-4.png')] bg-cover bg-no-repeat md:bg-blend-multiply
+	max-md:bg-[url('$lib/assets/design/home-background-mobile.png')]"
 	id="hero"
 >
 	<div class="flex flex-row flex-wrap justify-around items-center relative">
@@ -110,7 +111,7 @@
 </section>
 <section class="mt-8 bg-slate-200 bg-[url('$lib/assets/stock/baby-sleeping.png')] bg-cover bg-blend-multiply">
 	<div class="flex flex-row mx-8 gap-4">
-		<div class="p-8 w-1/2">
+		<div class="p-8 w-full md:w-1/2">
 			<h1 class="h1 mt-4 mb-0">About Us</h1>
 			<img class="w-44 mt-0" src="$lib/assets/design/purple_underline-2.png" alt="" />
 			<p class="mt-4">
@@ -120,7 +121,7 @@
 				and shaping future generations.
 			</p>
 		</div>
-		<div class="w-1/2 my-10">
+		<div class="w-1/2 my-10 max-md:hidden">
 			<div class="inline-block -mr-6 z-10 relative">
 				<div class="flex flex-col items-center py-4 px-2 w-[180px] bg-primary-100/90 rounded-lg shadow-md">
 					<p class="h4 text-bkPurple/90 font-bold mb-4">We're here for</p>
@@ -146,10 +147,3 @@
 		</div>
 	</div>
 </section>
-
-<style lang="postcss">
-	#hero {
-		/* background-image: url('$lib/assets/stock/mother-4.png');
-		background-size: cover; */
-	}
-</style>

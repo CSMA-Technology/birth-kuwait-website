@@ -43,9 +43,9 @@
 					</a>
 				</svelte:fragment>
 				<svelte:fragment slot="trail">
-					<nav class="list-nav">
+					<nav class="list-nav" aria-label="Main navigation">
 						<ul
-							class={`flex flex-row align-bottom [&>li]:!mt-0 z-10 transition-all duration-500 ease-in-out
+							class={`flex flex-row align-bottom [&>li]:!mt-0 z-50 transition-all duration-500 ease-in-out
 							max-md:flex-col max-md:absolute left-0 max-md:mt-14 max-md:w-full max-md:bg-white
 							${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'} md:!visible md:!opacity-100`}
 							on:click={toggleMenu}
@@ -59,7 +59,12 @@
 								</li>
 							{/each}
 						</ul>
-						<button on:click={toggleMenu} class="z-20 !bg-transparent relative md:!hidden">
+						<button
+							on:click={toggleMenu}
+							class="z-20 !bg-transparent relative md:!hidden"
+							aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+							aria-expanded={isMenuOpen}
+						>
 							{#if !isMenuOpen}
 								<img src="$lib/assets/design/icons/hamburger-menu.png" alt="" />
 							{:else}
@@ -84,7 +89,7 @@
 						<img class="p-1" src="$lib/assets/design/icons/linkedin-icon.png" alt="LinkedIn Logo" />
 						<img class="p-1" src="$lib/assets/design/icons/youtube-color-icon.png" alt="Youtube Logo" />
 					</div>
-					<img class="w-40" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
+					<img class="w-40 max-md:invisible" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
 				</div>
 				<hr class="border-neutral-200 divider my-2" />
 				<p class="text-slate-400 text-center">© 2022 Birth Kuwait, Inc.</p>

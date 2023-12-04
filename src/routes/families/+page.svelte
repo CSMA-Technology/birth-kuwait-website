@@ -5,7 +5,7 @@
 </script>
 
 <section class="w-full h-full bg-cover bg-[url($lib/assets/design/families-background.png)]">
-	<div class="flex flex-row flex-wrap w-full p-8 justify-around gap-8">
+	<div class="flex flex-row flex-wrap w-full p-4 md:p-8 justify-around gap-8">
 		<Card underline class="w-[40rem] ">
 			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Ready to talk?</h2>
 			<p class="text-xl">Consultations are available every week. Use the calendar below to schedule yours today.</p>
