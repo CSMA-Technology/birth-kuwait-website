@@ -2,6 +2,8 @@
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
 	import bkLogo from '$lib/assets/bk_logo.jpeg';
 	import Card from '$lib/components/Card.svelte';
+
+	const trainingLink = 'https://zcal.co/birthkuwait/training';
 </script>
 
 <section class="w-full bg-cover md:min-h-[30rem] bg-[url($lib/assets/design/professionals-background.png)]">
@@ -15,18 +17,12 @@
 				events={[
 					{
 						id: '123',
-						date: '12/12/2021',
-						title: 'Event 1',
+						date: 'Weekdays',
+						title: '1 Hour Training',
 						description: 'This is a description',
-						imageSrc: bkLogo
+						imageSrc: bkLogo,
+						link: trainingLink
 					},
-					{
-						id: '234',
-						date: '12/12/2021',
-						title: 'Event 2',
-						description: 'This is a description',
-						imageSrc: bkLogo
-					}
 				]}
 				title="Professional Training"
 				description="We offer a wide selection of training sessions! Check out our schedule below and contact us for more details"

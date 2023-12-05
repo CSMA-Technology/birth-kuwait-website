@@ -7,6 +7,7 @@
 		description: string;
 		date: string;
 		imageSrc: string;
+		link?: string;
 	}>;
 	export let title = 'Featured Events';
 	export let description = '';
@@ -19,21 +20,23 @@
 	{/if}
 	<div class="grid grid-cols-1 gap-2">
 		{#each events as event}
-			<div class="flex items-center p-2 border rounded-lg">
-				<div class="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden">
-					<img src={event.imageSrc} alt={event.title} class="object-cover w-full h-full" />
+			<a href={event.link} aria-disabled={!event.link} target="_blank">
+				<div class="flex items-center p-2 border rounded-lg">
+					<div class="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden">
+						<img src={event.imageSrc} alt={event.title} class="object-cover w-full h-full" />
+					</div>
+					<div class="ml-4 flex-grow">
+						<h3 class="font-semibold">{event.title}</h3>
+						<p class="text-sm text-gray-600 truncate">{event.description}</p>
+					</div>
+					<div class="ml-4">
+						<span class="block text-sm bg-gray-100 py-2 px-4 rounded w-[6.5rem] text-center" aria-label="Event Date">
+							<img class="mx-auto" src="$lib/assets/design/icons/calendar.svg" alt="" aria-hidden />
+							{event.date}
+						</span>
+					</div>
 				</div>
-				<div class="ml-4 flex-grow">
-					<h3 class="font-semibold">{event.title}</h3>
-					<p class="text-sm text-gray-600 truncate">{event.description}</p>
-				</div>
-				<div class="ml-4">
-					<span class="block text-sm bg-gray-100 py-2 px-4 rounded" aria-label="Event Date">
-						<img class="mx-auto" src="$lib/assets/design/icons/calendar.svg" alt="" aria-hidden />
-						{event.date}
-					</span>
-				</div>
-			</div>
+			</a>
 		{/each}
 	</div>
 </Card>

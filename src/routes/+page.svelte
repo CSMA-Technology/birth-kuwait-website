@@ -47,31 +47,37 @@
 				<a class="btn bg-slate-200" href="/find-a-professional">Learn More</a>
 			</span>
 		</div>
-		<EventsPanel
+		<div class="flex flex-col items-center">
+			<EventsPanel
 			events={[
 				{
 					id: '123',
-					date: '12/1',
-					description: 'A great event',
-					title: 'Event 1',
-					imageSrc: bkLogo
+					date: '07/12/23',
+					description: 'FREE Lecture',
+					title: 'Who is a Doula?',
+					imageSrc: bkLogo,
+					link: 'https://zcal.co/birthkuwait/doula'
 				},
 				{
 					id: '123',
-					date: '12/1',
-					description: 'A great event',
-					title: 'Event 2',
-					imageSrc: bkLogo
+					date: '02/12/23',
+					description: 'FREE Lecture',
+					title: 'My Life Guide',
+					imageSrc: bkLogo,
+					link: 'https://zcal.co/birthkuwait/mylifeguide'
 				},
 				{
 					id: '123',
-					date: '12/1',
-					description: 'A great event',
-					title: 'Event 3',
-					imageSrc: bkLogo
+					date: 'Thursdays',
+					description: 'Basics Workshop',
+					title: 'Newborn Care',
+					imageSrc: bkLogo,
+					link: 'https://zcal.co/birthkuwait/newborn'
 				}
 			]}
 		/>
+		<a class="btn bg-secondary-200 mt-4" href='/events'>See all events</a>
+		</div>
 	</div>
 </section>
 <section>
