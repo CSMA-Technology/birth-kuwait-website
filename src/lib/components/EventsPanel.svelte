@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Card from './Card.svelte';
+	import CalendlyPopupButton from './CalendlyPopupButton.svelte';
+import Card from './Card.svelte';
 
 	export let events: Array<{
 		id: string;
@@ -7,6 +8,7 @@
 		description: string;
 		date: string;
 		imageSrc: string;
+		bookingLink: string;
 	}>;
 	export let title = 'Featured Events';
 	export let description = '';
@@ -20,9 +22,10 @@
 	<div class="grid grid-cols-1 gap-2">
 		{#each events as event}
 			<div class="flex items-center p-2 border rounded-lg">
-				<div class="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden">
+				<CalendlyPopupButton bookingLink={event.bookingLink}>Book</CalendlyPopupButton>
+				<!-- <div class="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden">
 					<img src={event.imageSrc} alt={event.title} class="object-cover w-full h-full" />
-				</div>
+				</div> -->
 				<div class="ml-4 flex-grow">
 					<h3 class="font-semibold">{event.title}</h3>
 					<p class="text-sm text-gray-600 truncate">{event.description}</p>

@@ -47,31 +47,37 @@
 				<a class="btn bg-slate-200" href="/find-a-professional">Learn More</a>
 			</span>
 		</div>
-		<EventsPanel
+		<div class="flex flex-col items-center">
+			<EventsPanel
 			events={[
 				{
 					id: '123',
-					date: '12/1',
-					description: 'A great event',
-					title: 'Event 1',
-					imageSrc: bkLogo
+					date: '07/12/23',
+					description: 'FREE Lecture',
+					title: 'Who is a Doula?',
+					imageSrc: bkLogo,
+					bookingLink: 'https://calendly.com/birthkuwait/free-lecture-who-is-a-doula-7-dec'
 				},
 				{
 					id: '123',
-					date: '12/1',
-					description: 'A great event',
-					title: 'Event 2',
-					imageSrc: bkLogo
+					date: '02/12/23',
+					description: 'Professional Training',
+					title: 'One Hour Training',
+					imageSrc: bkLogo,
+					bookingLink: 'https://calendly.com/birthkuwait/professional-training'
 				},
 				{
 					id: '123',
-					date: '12/1',
-					description: 'A great event',
-					title: 'Event 3',
-					imageSrc: bkLogo
+					date: 'Thursdays',
+					description: 'Basics Workshop',
+					title: 'Newborn Care',
+					imageSrc: bkLogo,
+					bookingLink: 'https://calendly.com/birthkuwait/newborn-care-basics-workshop'
 				}
 			]}
 		/>
+		<a class="btn bg-secondary-200 mt-4" href='/events'>See all events</a>
+		</div>
 	</div>
 </section>
 <section>
