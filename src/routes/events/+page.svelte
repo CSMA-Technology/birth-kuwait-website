@@ -1,22 +1,26 @@
-<!-- Calendly.svelte -->
-<script>
-  import { onMount } from 'svelte';
-
-  onMount(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-
-    script.onload = () => {
-      Calendly.initInlineWidget({
-        url: 'https://calendly.com/birthkuwait',
-        parentElement: document.getElementById('calendly-container'),
-      });
-    };
-
-    document.body.appendChild(script);
-  });
+<script lang="ts" context="module">
+	// Calendly gets loaded by the script tag in the head
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	declare const Calendly: any;
 </script>
 
+<script lang="ts">
+	import { browser } from '$app/environment';
+
+	let calendlyRef: HTMLElement;
+	const onScriptLoad = () => {
+		Calendly.initInlineWidget({
+			url: 'https://calendly.com/birthkuwait',
+			parentElement: calendlyRef
+		});
+	};
+
+	$: browser && Calendly && calendlyRef && onScriptLoad();
+</script>
+
+<svelte:head>
+	<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</svelte:head>
+
 <div class="w-full text-center text-xl">Book any session with us below!</div>
-<div class="w-full h-full" id="calendly-container" style="padding-bottom: 2rem;"></div>
+<div bind:this={calendlyRef} class="w-full h-full pb-8" />
