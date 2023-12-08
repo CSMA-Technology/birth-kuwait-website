@@ -2,14 +2,18 @@
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
 	import bkLogo from '$lib/assets/bk_logo.jpeg';
 	import Card from '$lib/components/Card.svelte';
+	import CalendlyPopupButton from '$lib/components/CalendlyPopupButton.svelte';
+
+	const consultationLink = 'https://calendly.com/birthkuwait/consultation';
 </script>
 
 <section class="w-full h-full bg-cover bg-[url($lib/assets/design/families-background.png)]">
 	<div class="flex flex-row flex-wrap w-full p-4 md:p-8 justify-around gap-8">
-		<Card underline class="w-[40rem] ">
+		<Card underline class="w-[40rem] flex flex-col items-center">
 			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Ready to talk?</h2>
-			<p class="text-xl">Consultations are available every week. Use the calendar below to schedule yours today.</p>
-			<div class="text-center mt-4 w-full h-44 bg-gray-400">Booking calendar goes here</div>
+			<p class="text-xl">Meet with one of our experts to craft a plan that will work best for you, whatever phase of motherhood you are in.</p>
+			<p class="text-lg mt-5 mb-5">What to expect: Some details about the consultation like length, what will be discussed, outcomes, etc.</p>
+			<CalendlyPopupButton bookingLink={consultationLink}>Book Now!</CalendlyPopupButton>
 		</Card>
 		<Card underline class="card h-fit bg-white w-[40rem] p-6">
 			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Our facilities</h2>
@@ -33,17 +37,19 @@
 				events={[
 					{
 						id: '123',
-						date: '12/12/2021',
-						title: 'Event 1',
+						date: '07/12/2023',
+						title: 'Who is a Doula?',
 						description: 'This is a description',
-						imageSrc: bkLogo
+						imageSrc: bkLogo,
+						bookingLink: 'https://calendly.com/birthkuwait/free-lecture-who-is-a-doula-7-dec'
 					},
 					{
 						id: '234',
-						date: '12/12/2021',
-						title: 'Event 2',
+						date: '02/12/2021',
+						title: 'My Life Guide',
 						description: 'This is a description',
-						imageSrc: bkLogo
+						imageSrc: bkLogo,
+						bookingLink: 'https://calendly.com/birthkuwait/free-lecture-who-is-a-doula-7-dec'
 					}
 				]}
 			/>
@@ -55,17 +61,35 @@
 				events={[
 					{
 						id: '123',
-						date: '12/12/2021',
-						title: 'Event 1',
-						description: 'This is a description',
-						imageSrc: bkLogo
+						date: 'Thursdays',
+						title: 'Prenatal Exercise',
+						description: 'Short description',
+						imageSrc: bkLogo,
+						bookingLink: 'https://calendly.com/birthkuwait/prenatal-exercise-workshop'
+					},
+					{
+						id: '123',
+						date: 'Thursdays',
+						title: 'Childbirth Prep',
+						description: 'Short description',
+						imageSrc: bkLogo,
+						bookingLink: 'https://calendly.com/birthkuwait/childbirth-preparations-workshop'
 					},
 					{
 						id: '234',
-						date: '12/12/2021',
-						title: 'Event 2',
-						description: 'This is a description',
-						imageSrc: bkLogo
+						date: 'Saturdays',
+						title: 'Breastfeeding Basics',
+						description: 'Short description',
+						imageSrc: bkLogo,
+						bookingLink: 'https://calendly.com/birthkuwait/breastfeeding-basics-workshop'
+					},
+					{
+						id: '123',
+						date: 'Sundays',
+						title: 'Newborn Care',
+						description: 'Short description',
+						imageSrc: bkLogo,
+						bookingLink: 'https://calendly.com/birthkuwait/newborn-care-basics-workshop'
 					}
 				]}
 			/>

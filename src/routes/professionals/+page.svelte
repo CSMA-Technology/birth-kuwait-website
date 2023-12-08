@@ -15,17 +15,11 @@
 				events={[
 					{
 						id: '123',
-						date: '12/12/2021',
-						title: 'Event 1',
+						date: 'Weekdays',
+						title: 'One Hour Training',
 						description: 'This is a description',
-						imageSrc: bkLogo
-					},
-					{
-						id: '234',
-						date: '12/12/2021',
-						title: 'Event 2',
-						description: 'This is a description',
-						imageSrc: bkLogo
+						imageSrc: bkLogo,
+						bookingLink: 'https://calendly.com/birthkuwait/professional-training'
 					}
 				]}
 				title="Professional Training"
