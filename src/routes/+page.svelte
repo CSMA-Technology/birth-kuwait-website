@@ -1,10 +1,13 @@
-<script>
+<script lang="ts">
 	import Bubble from '$lib/components/Bubble.svelte';
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
-	import bkLogo from '$lib/assets/bk_logo.jpeg';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import ServiceCard from '$lib/components/ServiceCard.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+	const { featuredEventData } = data;
 	let mounted = false;
 	onMount(() => {
 		mounted = true;
@@ -49,32 +52,7 @@
 		</div>
 		<div class="flex flex-col items-center">
 			<EventsPanel
-			events={[
-				{
-					id: '123',
-					date: '07/12/23',
-					description: 'FREE Lecture',
-					title: 'Who is a Doula?',
-					imageSrc: bkLogo,
-					bookingLink: 'https://calendly.com/birthkuwait/free-lecture-who-is-a-doula-7-dec'
-				},
-				{
-					id: '123',
-					date: '02/12/23',
-					description: 'Professional Training',
-					title: 'One Hour Training',
-					imageSrc: bkLogo,
-					bookingLink: 'https://calendly.com/birthkuwait/professional-training'
-				},
-				{
-					id: '123',
-					date: 'Thursdays',
-					description: 'Basics Workshop',
-					title: 'Newborn Care',
-					imageSrc: bkLogo,
-					bookingLink: 'https://calendly.com/birthkuwait/newborn-care-basics-workshop'
-				}
-			]}
+			events={featuredEventData}
 		/>
 		<a class="btn bg-secondary-200 mt-4" href='/events'>See all events</a>
 		</div>

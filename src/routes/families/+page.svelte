@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
-	import bkLogo from '$lib/assets/bk_logo.jpeg';
 	import Card from '$lib/components/Card.svelte';
 	import CalendlyPopupButton from '$lib/components/CalendlyPopupButton.svelte';
+	import type { PageData } from './$types';
 
+	export let data: PageData;
+	const { workshopEventData, lectureEventData } = data;	
 	const consultationLink = 'https://calendly.com/birthkuwait/consultation';
 </script>
 
@@ -34,64 +36,14 @@
 			<EventsPanel
 				title="Free Lectures"
 				description="Join us and our amazing speakers for these absolutely free lectures on fascinating topics!"
-				events={[
-					{
-						id: '123',
-						date: '07/12/2023',
-						title: 'Who is a Doula?',
-						description: 'This is a description',
-						imageSrc: bkLogo,
-						bookingLink: 'https://calendly.com/birthkuwait/free-lecture-who-is-a-doula-7-dec'
-					},
-					{
-						id: '234',
-						date: '02/12/2021',
-						title: 'My Life Guide',
-						description: 'This is a description',
-						imageSrc: bkLogo,
-						bookingLink: 'https://calendly.com/birthkuwait/free-lecture-who-is-a-doula-7-dec'
-					}
-				]}
+				events={lectureEventData}
 			/>
 		</div>
 		<div class="w-[25rem]">
 			<EventsPanel
 				title="Group Workshops"
 				description="We offer group workshops, too! Reserve your seat today. "
-				events={[
-					{
-						id: '123',
-						date: 'Thursdays',
-						title: 'Prenatal Exercise',
-						description: 'Short description',
-						imageSrc: bkLogo,
-						bookingLink: 'https://calendly.com/birthkuwait/prenatal-exercise-workshop'
-					},
-					{
-						id: '123',
-						date: 'Thursdays',
-						title: 'Childbirth Prep',
-						description: 'Short description',
-						imageSrc: bkLogo,
-						bookingLink: 'https://calendly.com/birthkuwait/childbirth-preparations-workshop'
-					},
-					{
-						id: '234',
-						date: 'Saturdays',
-						title: 'Breastfeeding Basics',
-						description: 'Short description',
-						imageSrc: bkLogo,
-						bookingLink: 'https://calendly.com/birthkuwait/breastfeeding-basics-workshop'
-					},
-					{
-						id: '123',
-						date: 'Sundays',
-						title: 'Newborn Care',
-						description: 'Short description',
-						imageSrc: bkLogo,
-						bookingLink: 'https://calendly.com/birthkuwait/newborn-care-basics-workshop'
-					}
-				]}
+				events={workshopEventData}
 			/>
 		</div>
 	</div>
