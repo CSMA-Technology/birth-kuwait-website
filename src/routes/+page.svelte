@@ -40,7 +40,7 @@
 	max-md:bg-[url('$lib/assets/design/home-background-mobile.png')]"
 	id="hero"
 >
-	<div class="flex flex-row flex-wrap justify-around items-center relative">
+	<div class="flex flex-row flex-wrap justify-around items-center relative min-h-[20rem]">
 		<div class="h-fit mb-10">
 			<p class="text-white text-4xl max-w-md text-center">
 				We bring world-class maternal support to professionals and families

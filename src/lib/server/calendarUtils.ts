@@ -10,18 +10,32 @@ export const getEventDetails = async (eventUuid: string) => {
 			'Content-Type': 'application/json'
 		}
 	});
+	if (!eventTypeResponse.ok) {
+		if (eventTypeResponse.status === 404) {
+			throw new Error('Event not found');
+		} else {
+			throw new Error(`Failed to fetch event details. Status: ${eventTypeResponse.status}`);
+		}
+	}
 	const eventTypeData: Calendly.EventTypeData = (await eventTypeResponse.json()).resource.map(mapCalendlyEventType);
 	return eventTypeData;
 };
 
 export const getAllEventTypes = async () => {
-	const eventTypesResponse = await fetch(`${CALENDLY_API_URL}/event_types?user=${CALENDLY_USER_URI}`, {
+	const eventTypesResponse = await fetch(`${CALENDLY_API_URL}/event_types?user=${CALENDLY_USER_URI}&active=true`, {
 		method: 'GET',
 		headers: {
 			Authorization: AUTH_HEADER,
 			'Content-Type': 'application/json'
 		}
 	});
+	if (!eventTypesResponse.ok) {
+		if (eventTypesResponse.status === 404) {
+			throw new Error('No events found');
+		} else {
+			throw new Error(`Failed to fetch event details. Status: ${eventTypesResponse.status}`);
+		}
+	}
 	const allEventTypesData: Array<Calendly.EventTypeData> = (await eventTypesResponse.json()).collection.map(
 		mapCalendlyEventType
 	);
@@ -40,6 +54,13 @@ export const getScheduledEvents = async () => {
 			}
 		}
 	);
+	if (!scheduledEventsResponse.ok) {
+		if (scheduledEventsResponse.status === 404) {
+			throw new Error('Event not found');
+		} else {
+			throw new Error(`Failed to fetch event details. Status: ${scheduledEventsResponse.status}`);
+		}
+	}
 	const scheduledEventsResponseJson = await scheduledEventsResponse.json();
 	console.log(scheduledEventsResponseJson);
 };
@@ -48,7 +69,7 @@ const extractTags = (text: string): string[] => {
 	const hashtagRegex = /#(\w+)/g;
 	const matches = text.match(hashtagRegex);
 	return matches ? matches.map((match) => match.substring(1).toLowerCase()) : [];
-}
+};
 
 const mapCalendlyEventType = (eventTypeData): Calendly.EventTypeData => {
 	return {
