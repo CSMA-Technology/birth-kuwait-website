@@ -5,7 +5,7 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	const { workshopEventData, lectureEventData } = data;	
+	const { workshopEventData, lectureEventData } = data;
 	const consultationLink = 'https://calendly.com/birthkuwait/consultation';
 </script>
 
@@ -13,8 +13,13 @@
 	<div class="flex flex-row flex-wrap w-full p-4 md:p-8 justify-around gap-8">
 		<Card underline class="w-[40rem] flex flex-col items-center">
 			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Ready to talk?</h2>
-			<p class="text-xl">Meet with one of our experts to craft a plan that will work best for you, whatever phase of motherhood you are in.</p>
-			<p class="text-lg mt-5 mb-5">What to expect: Some details about the consultation like length, what will be discussed, outcomes, etc.</p>
+			<p class="text-xl">
+				Meet with one of our experts to craft a plan that will work best for you, whatever phase of motherhood you are
+				in.
+			</p>
+			<p class="text-lg mt-5 mb-5">
+				What to expect: Some details about the consultation like length, what will be discussed, outcomes, etc.
+			</p>
 			<CalendlyPopupButton bookingLink={consultationLink}>Book Now!</CalendlyPopupButton>
 		</Card>
 		<Card underline class="card h-fit bg-white w-[40rem] p-6">

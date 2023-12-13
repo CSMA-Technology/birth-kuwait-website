@@ -18,6 +18,7 @@ declare global {
 			internalNote: string;
 			uid: string;
 			duration: string;
+			tags: string[];
 		}
 	}
 }

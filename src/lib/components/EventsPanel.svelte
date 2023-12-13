@@ -28,12 +28,12 @@
 					<h3 class="font-semibold">{event.title}</h3>
 					<p class="text-sm text-gray-600 truncate">{event.description}</p>
 				</div>
-				<div class="ml-4 min-w-fit">
-					<span class="block text-sm bg-gray-100 py-2 px-4 rounded" aria-label="Event Duration">
+				<!-- <div class="ml-4 min-w-fit">
+					<span class="block text-sm bg-gray-100 py-2 px-4 rounded" aria-label="Event Date">
 						<img class="mx-auto" src="$lib/assets/design/icons/calendar.svg" alt="" aria-hidden />
-						{event.duration}
+						{event.date}
 					</span>
-				</div>
+				</div> -->
 			</div>
 		{/each}
 	</div>
