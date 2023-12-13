@@ -51,7 +51,7 @@
 							on:click={toggleMenu}
 							on:keypress={toggleMenu}
 						>
-							{#each [{ name: 'About', href: '/about' }, { name: 'Professionals', href: '/professionals' }, { name: 'Families', href: '/families' }, { name: 'Upcoming Events', href: '/events' }, { name: 'Volunteer', href: '/volunteer' }, { name: 'Contact Us', href: '/contact' }] as { name, href }}
+							{#each [{ name: 'About', href: '/about' }, { name: 'Professionals', href: '/professionals' }, { name: 'Families', href: '/families' }, { name: 'Events', href: '/events' }, { name: 'Volunteer', href: '/volunteer' }, { name: 'Contact Us', href: '/contact' }] as { name, href }}
 								<li>
 									<a {href}>
 										<span class:active={activePage === href} class="flex-auto">{name}</span>

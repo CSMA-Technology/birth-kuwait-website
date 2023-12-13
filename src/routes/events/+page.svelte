@@ -11,7 +11,7 @@
 	const onScriptLoad = () => {
 		Calendly.initInlineWidget({
 			url: 'https://calendly.com/birthkuwait',
-			parentElement: calendlyRef
+			parentElement: calendlyRef,
 		});
 	};
 
@@ -22,5 +22,9 @@
 	<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </svelte:head>
 
-<div class="w-full text-center text-xl">Book any session with us below!</div>
-<div bind:this={calendlyRef} class="w-full h-full pb-8" />
+<div class="w-full h-full">
+	<div>
+		<h1 class="h3 font-bold text-primary-500 text-center">Book a session with us below!</h1>
+	</div>
+	<div bind:this={calendlyRef} class="w-full h-full pb-8" />
+</div>
