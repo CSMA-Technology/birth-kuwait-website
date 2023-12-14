@@ -25,3 +25,9 @@
 <button class="btn bg-primary-500 text-white" on:click={initializeCalendly}>
   <slot />
 </button>
+
+<style>
+  .calendly-overlay .calendly-popup {
+    max-height: 690px;
+  }
+</style>

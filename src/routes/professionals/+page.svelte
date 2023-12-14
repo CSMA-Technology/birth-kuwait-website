@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import EventsPanel from '$lib/components/EventsPanel.svelte';
-	import bkLogo from '$lib/assets/bk_logo.jpeg';
 	import Card from '$lib/components/Card.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+	const { trainingEventData } = data;
 </script>
 
 <section class="w-full bg-cover md:min-h-[30rem] bg-[url($lib/assets/design/professionals-background.png)]">
@@ -12,16 +15,7 @@
 	<div class="flex flex-row flex-wrap justify-around p-4 md:p-12 w-full">
 		<div class="md:w-[25rem]">
 			<EventsPanel
-				events={[
-					{
-						id: '123',
-						date: 'Weekdays',
-						title: 'One Hour Training',
-						description: 'This is a description',
-						imageSrc: bkLogo,
-						bookingLink: 'https://calendly.com/birthkuwait/professional-training'
-					}
-				]}
+				events={trainingEventData}
 				title="Professional Training"
 				description="We offer a wide selection of training sessions! Check out our schedule below and contact us for more details"
 			/>

@@ -7,3 +7,20 @@ declare namespace App {
 	// interface Error {}
 	// interface Platform {}
 }
+
+declare global {
+	namespace Calendly {
+		interface EventTypeData {
+			active: boolean;
+			description: string;
+			name: string;
+			schedulingUrl: string;
+			internalNote: string;
+			uid: string;
+			duration: string;
+			tags: string[];
+		}
+	}
+}
+
+export { };
