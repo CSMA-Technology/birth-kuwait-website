@@ -50,7 +50,7 @@
 				<a class="btn bg-slate-200" href="/find-a-professional">Learn More</a>
 			</span>
 		</div>
-		<div class="flex flex-col items-center">
+		<div class="flex flex-col items-center max-w-[24rem]">
 			<EventsPanel
 			events={featuredEventData}
 		/>

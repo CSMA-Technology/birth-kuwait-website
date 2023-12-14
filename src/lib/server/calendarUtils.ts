@@ -62,7 +62,6 @@ export const getScheduledEvents = async () => {
 		}
 	}
 	const scheduledEventsResponseJson = await scheduledEventsResponse.json();
-	console.log(scheduledEventsResponseJson);
 };
 
 const extractTags = (text: string): string[] => {
@@ -88,7 +87,7 @@ export const transformForEventPanel = (events: Calendly.EventTypeData[]) => {
 	return events.map((event: Calendly.EventTypeData) => ({
 		id: event.uid,
 		title: event.name,
-		description: event.description.substring(0, 36) + '...',
+		description: event.description,
 		bookingLink: event.schedulingUrl,
 		duration: event.duration
 	}));

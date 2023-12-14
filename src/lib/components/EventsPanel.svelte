@@ -23,11 +23,11 @@
 	<div class="grid grid-cols-1 gap-2">
 		{#if events.length > 0}
 			{#each events as event}
-				<div class="flex items-center p-2 border rounded-lg">
+				<div class="flex items-center p-2 border rounded-lg min-h-[6rem]">
 					<CalendlyPopupButton bookingLink={event.bookingLink}>Book</CalendlyPopupButton>
 					<div class="ml-4 flex-grow">
 						<h3 class="font-semibold">{event.title}</h3>
-						<p class="text-sm text-gray-600 truncate">{event.description}</p>
+						<p class="text-sm text-gray-600 break-words line-clamp-2">{event.description}</p>
 					</div>
 					<!-- <div class="ml-4 min-w-fit">
 						<span class="block text-sm bg-gray-100 py-2 px-4 rounded" aria-label="Event Date">
