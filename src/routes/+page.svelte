@@ -14,33 +14,48 @@
 	});
 </script>
 
-<!-- Decorations container For Large Screens -->
-<div class="max-md:hidden relative w-full left-0 top-0">
-	{#if mounted}
-		<div in:fade>
-			<img src="$lib/assets/design/Doodle-1.png" class="absolute opacity-90 w-16 top-44 left-10" alt="" aria-hidden />
-			<img src="$lib/assets/design/Doodle-2.png" class="absolute opacity-90 w-20 top-10 left-1/4" alt="" aria-hidden />
-			<img src="$lib/assets/design/Doodle-3.png" class="absolute opacity-90 w-16 top-48 right-5" alt="" aria-hidden />
-			<img src="$lib/assets/design/Doodle-4.png" class="absolute opacity-90 w-16 top-60 right-1/3" alt="" aria-hidden />
-			<img src="$lib/assets/design/Doodle-4.png" class="absolute opacity-90 w-24 top-96 left-1/3" alt="" aria-hidden />
-		</div>
-	{/if}
-	<Bubble class="bg-primary-500 w-32 h-32 left-10 top-96" flair>
-		<img class="h-full" src="$lib/assets/stock/mother-1.png" alt="" />
-	</Bubble>
-	<Bubble class="bg-primary-500 w-32 h-32 right-1/3 top-20" flair>
-		<img class="h-full" src="$lib/assets/stock/mother-2.png" alt="" />
-	</Bubble>
-	<Bubble class="bg-primary-500 w-24 h-24 right-1/2 top-80" flair>
-		<img class="h-full" src="$lib/assets/stock/mother-3.png" alt="" />
-	</Bubble>
-</div>
 <section
-	class="px-5 pt-16 pb-16 bg-primary-400 z-0 md:bg-[url('$lib/assets/stock/mother-4.png')] bg-cover bg-no-repeat md:bg-blend-multiply
-	max-md:bg-[url('$lib/assets/design/home-background-mobile.png')]"
+	class="px-5 pt-16 pb-16 md:bg-[url('$lib/assets/stock/mother-4.png')] bg-cover
+				max-md:bg-[url('$lib/assets/design/home-background-mobile.png')]"
 	id="hero"
 >
-	<div class="flex flex-row flex-wrap justify-around items-center relative min-h-[20rem]">
+	<!-- Decorations container For Large Screens -->
+	<div class="max-md:hidden relative w-full left-0 top-0">
+		{#if mounted}
+			<div in:fade>
+				<img src="$lib/assets/design/Doodle-1.png" class="absolute opacity-90 w-16 top-44 left-10" alt="" aria-hidden />
+				<img
+					src="$lib/assets/design/Doodle-2.png"
+					class="absolute opacity-90 w-20 top-10 left-1/4"
+					alt=""
+					aria-hidden
+				/>
+				<img src="$lib/assets/design/Doodle-3.png" class="absolute opacity-90 w-16 top-48 right-5" alt="" aria-hidden />
+				<img
+					src="$lib/assets/design/Doodle-4.png"
+					class="absolute opacity-90 w-16 top-60 right-1/3"
+					alt=""
+					aria-hidden
+				/>
+				<img
+					src="$lib/assets/design/Doodle-4.png"
+					class="absolute opacity-90 w-24 top-96 left-1/3"
+					alt=""
+					aria-hidden
+				/>
+			</div>
+		{/if}
+		<Bubble class="bg-primary-500 w-32 h-32 left-10 top-96" flair>
+			<img class="h-full" src="$lib/assets/stock/mother-1.png" alt="" />
+		</Bubble>
+		<Bubble class="bg-primary-500 w-32 h-32 right-1/3 top-20" flair>
+			<img class="h-full" src="$lib/assets/stock/mother-2.png" alt="" />
+		</Bubble>
+		<Bubble class="bg-primary-500 w-24 h-24 right-1/2 top-80" flair>
+			<img class="h-full" src="$lib/assets/stock/mother-3.png" alt="" />
+		</Bubble>
+	</div>
+	<div class="flex flex-row flex-wrap justify-between md:px-24 items-center relative min-h-[20rem]">
 		<div class="h-fit mb-10">
 			<p class="text-white text-4xl max-w-md text-center">
 				We bring world-class maternal support to professionals and families
@@ -51,10 +66,8 @@
 			</span>
 		</div>
 		<div class="flex flex-col items-center max-w-[24rem]">
-			<EventsPanel
-			events={featuredEventData}
-		/>
-		<a class="btn bg-secondary-200 mt-4" href='/events'>See all events</a>
+			<EventsPanel events={featuredEventData} />
+			<a class="btn bg-secondary-200 mt-4" href="/events">See all events</a>
 		</div>
 	</div>
 </section>

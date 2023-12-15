@@ -2,8 +2,8 @@
 	import Card from '$lib/components/Card.svelte';
 </script>
 
-<section class="bg-[url($lib/assets/design/aboutus-background.png)] bg-bkBlue/20 bg-no-repeat bg-cover bg-bottom p-8">
-	<div class="flex flex-col flex-wrap content-center gap-y-7 gap-x-28 w-full md:h-[30rem] items-end">
+<section id="hero" class="bg-[url($lib/assets/design/aboutus-background.png)] bg-no-repeat bg-cover bg-bottom p-8">
+	<div class="relative flex flex-col flex-wrap content-center gap-y-7 gap-x-28 w-full md:h-[30rem] items-end">
 		<Card underline class="md:w-96 md:ml-8">
 			<h1 slot="header" class="h2 font-bold text-primary-500 text-center">Our Story</h1>
 
@@ -18,7 +18,7 @@
 			</p>
 		</Card>
 
-		<Card underline class="md:w-96 h-fit md:mr-20">
+		<Card underline class="md:w-96 h-fit">
 			<h2 slot="header" class="h2 font-bold text-primary-500 text-center">Our Impact</h2>
 			<p class="text-xl">
 				The BirthKuwait's has helped build a vibrant community of well trained, passionate, and hardworking
@@ -33,3 +33,15 @@
 		</Card>
 	</div>
 </section>
+
+<style>
+	#hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('$lib/assets/design/aboutus-decorations.png');
+	}
+</style>

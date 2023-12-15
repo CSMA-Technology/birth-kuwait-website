@@ -29,7 +29,7 @@
 				</p>
 			</Card>
 			<Card underline class="md:w-[35rem] h-fit xl:mr-20">
-				<h1 slot="header" class="h3 text-primary-500 text-center font-bold">Work with us</h1>
+				<h1 slot="header" class="h3 text-primary-500 text-center font-bold">Collaborate with BirthKuwait</h1>
 				<p class="text-xl w-full text-center">
 					Are you looking to offer professional services to our clients? We're always looking for more content and
 					talent. Reach out to us by filling out this form, and we'll be in touch!

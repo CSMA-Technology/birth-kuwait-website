@@ -11,7 +11,7 @@
 	const onScriptLoad = () => {
 		Calendly.initInlineWidget({
 			url: 'https://calendly.com/birthkuwait',
-			parentElement: calendlyRef,
+			parentElement: calendlyRef
 		});
 	};
 

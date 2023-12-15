@@ -12,7 +12,7 @@
 <section class="w-full h-full bg-cover bg-[url($lib/assets/design/families-background.png)]">
 	<div class="flex flex-row flex-wrap w-full p-4 md:p-8 justify-around gap-8">
 		<Card underline class="w-[40rem] flex flex-col items-center">
-			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Ready to talk?</h2>
+			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Consult a Professional</h2>
 			<p class="text-xl">
 				Meet with one of our experts to craft a plan that will work best for you, whatever phase of motherhood you are
 				in.
@@ -39,15 +39,15 @@
 		</Card>
 		<div class="w-[25rem]">
 			<EventsPanel
-				title="Free Lectures"
+				title="Free Events"
 				description="Join us and our amazing speakers for these absolutely free lectures on fascinating topics!"
 				events={lectureEventData}
 			/>
 		</div>
 		<div class="w-[25rem]">
 			<EventsPanel
-				title="Group Workshops"
-				description="We offer group workshops, too! Reserve your seat today. "
+				title="Workshops and Classes"
+				description="Whether you're looking for group classes or one-on-one sessions, you can book your seat now!"
 				events={workshopEventData}
 			/>
 		</div>
