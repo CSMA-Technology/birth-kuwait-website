@@ -10,7 +10,7 @@
 </script>
 
 <section class="w-full h-full bg-cover bg-[url($lib/assets/design/families-background.png)]">
-	<div class="flex flex-row flex-wrap w-full p-4 md:p-8 justify-around gap-8">
+	<div class="flex flex-row flex-wrap w-full p-4 md:p-8 justify-around gap-4">
 		<Card underline class="w-[40rem] flex flex-col items-center">
 			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Consult a Professional</h2>
 			<p class="text-xl">
@@ -22,7 +22,7 @@
 			</p>
 			<CalendlyPopupButton bookingLink={consultationLink}>Book Now!</CalendlyPopupButton>
 		</Card>
-		<Card underline class="card h-fit bg-white w-[40rem] p-6">
+		<Card underline class="card bg-white w-[40rem] p-6">
 			<h2 slot="header" class="h3 font-bold text-primary-500 text-center">Our facilities</h2>
 			<div class="flex flex-row">
 				<div class="w-2/3">
@@ -37,7 +37,7 @@
 				</div>
 			</div>
 		</Card>
-		<div class="w-[25rem]">
+		<div class="w-[25rem] h-full">
 			<EventsPanel
 				title="Free Events"
 				description="Join us and our amazing speakers for these absolutely free lectures on fascinating topics!"
