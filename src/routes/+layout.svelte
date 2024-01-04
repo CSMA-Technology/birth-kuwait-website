@@ -91,7 +91,7 @@
 					<img class="w-40 max-md:invisible" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
 				</div>
 				<hr class="border-neutral-200 divider my-2" />
-				<p class="text-slate-400 text-center">© 2022 Birth Kuwait, Inc.</p>
+				<p class="text-slate-400 text-center">© 2024 Birth Kuwait, Inc.</p>
 			</div>
 		</div>
 	</svelte:fragment>

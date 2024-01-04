@@ -32,7 +32,7 @@
 				<h1 slot="header" class="h3 text-primary-500 text-center font-bold">Collaborate with BirthKuwait</h1>
 				<p class="text-xl w-full text-center">
 					Are you looking to offer professional services to our clients? We're always looking for more content and
-					talent. Reach out to us by filling out this form, and we'll be in touch!
+					talent. Reach out to us on the <a class="anchor" href="/contact">contact page</a>, and we'll be in touch!
 				</p>
 			</Card>
 		</div>
