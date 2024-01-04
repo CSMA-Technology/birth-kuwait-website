@@ -74,3 +74,12 @@
 		</dl>
 	</div>
 </section>
+<section class="p-4 bg-[url($lib/assets/design/aboutus-decorations.png)] bg-clip-content">
+	<div class="my-8 max-w-3xl mx-auto">
+		<h1 class="h2 text-center my-4 font-bold text-primary-500">We're looking for volunteers!</h1>
+		<p>
+			This is placeholder text. Want to get involved in your community? We're always looking for volunteers to help us with our sessions and outreach.
+			Fill out the form above to contact us for volunteer opportunities. We thank you for your kindness and time!
+		</p>
+	</div>
+</section>

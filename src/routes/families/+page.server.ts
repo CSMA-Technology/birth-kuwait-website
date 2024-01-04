@@ -9,8 +9,12 @@ export const load = (async () => {
 	const workshopEventData = transformForEventPanel(
 		allEventTypes.filter((eventType) => eventType.tags.includes('workshop'))
 	);
+	const privateSessionData = transformForEventPanel(
+		allEventTypes.filter((eventType) => eventType.tags.includes('private'))
+	);
 	return {
 		lectureEventData,
-		workshopEventData
+		workshopEventData,
+		privateSessionData
 	};
 }) satisfies PageServerLoad;

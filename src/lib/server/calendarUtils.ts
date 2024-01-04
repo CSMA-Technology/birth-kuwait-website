@@ -22,7 +22,7 @@ export const getEventDetails = async (eventUuid: string) => {
 };
 
 export const getAllEventTypes = async () => {
-	const eventTypesResponse = await fetch(`${CALENDLY_API_URL}/event_types?user=${CALENDLY_USER_URI}&active=true`, {
+	const eventTypesResponse = await fetch(`${CALENDLY_API_URL}/event_types?user=${CALENDLY_USER_URI}`, {
 		method: 'GET',
 		headers: {
 			Authorization: AUTH_HEADER,
