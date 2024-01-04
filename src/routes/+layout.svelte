@@ -83,11 +83,10 @@
 			<div class="w-5/6 mx-auto">
 				<div class="flex flex-row justify-between items-center">
 					<div class="w-40" />
-					<div class="flex flex-row gap-1 h-8">
-						<img class="p-1" src="$lib/assets/design/icons/instagram-icon.png" alt="Instagram Logo" />
-						<img class="p-1" src="$lib/assets/design/icons/facebook-round-color-icon.png" alt="Facebook Logo" />
-						<img class="p-1" src="$lib/assets/design/icons/linkedin-icon.png" alt="LinkedIn Logo" />
-						<img class="p-1" src="$lib/assets/design/icons/youtube-color-icon.png" alt="Youtube Logo" />
+					<div class="flex flex-row gap-1 h-10">
+						<img class="p-1" src="$lib/assets/design/icons/instagram-bk.png" alt="Instagram Logo" />
+						<img class="p-1" src="$lib/assets/design/icons/facebook-bk.png" alt="Facebook Logo" />
+						<img class="p-1" src="$lib/assets/design/icons/youtube-bk.png" alt="Youtube Logo" />
 					</div>
 					<img class="w-40 max-md:invisible" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
 				</div>
