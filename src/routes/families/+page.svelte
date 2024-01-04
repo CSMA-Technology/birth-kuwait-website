@@ -5,7 +5,7 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	const { workshopEventData, lectureEventData } = data;
+	const { workshopEventData, lectureEventData, privateSessionData } = data;
 	const consultationLink = 'https://calendly.com/birthkuwait/consultation';
 </script>
 
@@ -49,6 +49,13 @@
 				title="Workshops and Classes"
 				description="Whether you're looking for group classes or one-on-one sessions, you can book your seat now!"
 				events={workshopEventData}
+			/>
+		</div>
+		<div class="w-[25rem]">
+			<EventsPanel
+				title="Didn't find what you are looking for?"
+				description="We have a rotating basis of professionals that you can book private time with! Check our schedule and book below."
+				events={privateSessionData}
 			/>
 		</div>
 	</div>
