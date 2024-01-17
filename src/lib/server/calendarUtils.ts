@@ -76,8 +76,8 @@ const mapCalendlyEventType = (eventTypeData): Calendly.EventTypeData => {
 		name: eventTypeData.name,
 		description: eventTypeData.description_plain,
 		schedulingUrl: eventTypeData.scheduling_url,
-		internalNote: eventTypeData.internal_note,
-		tags: extractTags(eventTypeData.internal_note),
+		internalNote: eventTypeData.internal_note ?? '',
+		tags: extractTags(eventTypeData.internal_note ?? ''),
 		uid: eventTypeData.uri.split('/').pop(),
 		duration: eventTypeData.duration + ' min'
 	};

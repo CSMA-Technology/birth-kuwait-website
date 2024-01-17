@@ -10,7 +10,7 @@
 	let calendlyRef: HTMLElement;
 	const onScriptLoad = () => {
 		Calendly.initInlineWidget({
-			url: 'https://calendly.com/birthkuwait',
+			url: 'https://calendly.com/stephanie-csma',
 			parentElement: calendlyRef
 		});
 	};

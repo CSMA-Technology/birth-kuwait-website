@@ -22,7 +22,7 @@
 		</div>
 		<div class="flex flex-col gap-8 items-end mt-8">
 			<Card underline class="md:w-[35rem] h-fit">
-				<h1 slot="header" class="h3 text-primary-500 text-center font-bold">Join the club</h1>
+				<h1 slot="header" class="h3 text-primary-500 text-center font-bold">Become a Member</h1>
 				<p class="text-xl w-full text-center">
 					Our brand new professional membership offers exclusive access to new products and services! To learn more,
 					click here.
