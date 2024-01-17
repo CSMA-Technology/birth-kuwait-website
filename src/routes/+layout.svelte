@@ -39,7 +39,7 @@
 				<svelte:fragment slot="lead">
 					<a href="/">
 						<!-- TODO: Get higher res logo -->
-						<img class="h-14" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
+						<img class="h-16" src="$lib/assets/bk-logo-horizontal.jpeg" alt="the BirthKuwait Logo" />
 					</a>
 				</svelte:fragment>
 				<svelte:fragment slot="trail">
@@ -88,7 +88,7 @@
 						<img class="p-1" src="$lib/assets/design/icons/facebook-bk.png" alt="Facebook Logo" />
 						<img class="p-1" src="$lib/assets/design/icons/youtube-bk.png" alt="Youtube Logo" />
 					</div>
-					<img class="w-40 max-md:invisible" src="$lib/assets/bk_logo.jpeg" alt="the BirthKuwait Logo" />
+					<img class="h-20 max-md:invisible" src="$lib/assets/bk-logo.png" alt="the BirthKuwait Logo" />
 				</div>
 				<hr class="border-neutral-200 divider my-2" />
 				<p class="text-slate-400 text-center">© 2024 Birth Kuwait, Inc.</p>

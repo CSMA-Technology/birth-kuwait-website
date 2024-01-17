@@ -15,7 +15,7 @@
 </script>
 
 <section
-	class="px-5 pt-16 pb-16 md:bg-[url('$lib/assets/stock/mother-4.png')] bg-cover
+	class="px-5 pt-16 pb-16 md:bg-[url('$lib/assets/home/full-shot-islamic-family-couch-cropped.jpg')] bg-cover
 				max-md:bg-[url('$lib/assets/design/home-background-mobile.png')]"
 	id="hero"
 >
@@ -55,19 +55,26 @@
 			<img class="h-full" src="$lib/assets/stock/mother-3.png" alt="" />
 		</Bubble>
 	</div>
-	<div class="flex flex-row flex-wrap justify-between md:px-24 items-center relative min-h-[20rem]">
-		<div class="h-fit mb-10">
-			<p class="text-white text-4xl max-w-md text-center">
-				We bring world-class maternal support to professionals and families
-			</p>
-			<span class="flex flex-row justify-center gap-5 pt-5">
-				<a class="btn bg-bkBlue text-white" href="/find-a-professional">Find a Professional</a>
-				<a class="btn bg-slate-200" href="/find-a-professional">Learn More</a>
-			</span>
+	<div class="flex flex-col">
+		<div class="flex flex-row flex-wrap justify-between md:px-24 items-center relative min-h-[20rem]">
+			<div class="h-fit mb-10">
+				<p class="text-white text-4xl max-w-md text-center">
+					We bring world-class maternal support to professionals and families
+				</p>
+				<span class="flex flex-row justify-center gap-5 pt-5">
+					<a class="btn bg-bkBlue text-white" href="/find-a-professional">Find a Professional</a>
+					<a class="btn bg-slate-200" href="/find-a-professional">Learn More</a>
+				</span>
+			</div>
+			<div class="flex flex-col items-center max-w-[24rem]">
+				<EventsPanel events={featuredEventData} />
+				<a class="btn bg-secondary-200 mt-4" href="/events">See all events</a>
+			</div>
 		</div>
-		<div class="flex flex-col items-center max-w-[24rem]">
-			<EventsPanel events={featuredEventData} />
-			<a class="btn bg-secondary-200 mt-4" href="/events">See all events</a>
+		<div class="flex justify-end">
+			<p class="relative text-sm text-gray-700">
+				Image by <a href="https://www.freepik.com/free-photo/full-shot-islamic-family-couch_33808592.htm#query=family&position=10&from_view=search&track=sph&uuid=6b8bbc07-af51-4d1e-ad6d-683c81c07176" target="_blank" rel="noopener noreferrer">Freepik</a>
+			</p>
 		</div>
 	</div>
 </section>

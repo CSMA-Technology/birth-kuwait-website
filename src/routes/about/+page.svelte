@@ -4,20 +4,21 @@
 
 <section id="hero" class="bg-[url($lib/assets/design/aboutus-background.png)] bg-no-repeat bg-cover bg-bottom p-8">
 	<div class="relative flex flex-row flex-wrap content-center gap-y-7 justify-around w-full md:h-[30rem] items-end">
+		<Card class="card md:w-96 h-full flex">
+			<img class="m-auto p-4" src="$lib/assets/bk-logo.png" alt="the BirthKuwait Logo" />
+		</Card>
 		<Card underline class="md:w-96 md:ml-8">
 			<h1 slot="header" class="h2 font-bold text-primary-500 text-center">Our Story</h1>
-
 			<p class="text-xl">
 				BirthKuwait is a non-profit community organization dedicated to providing up-to-date evidence based educational
 				services, advocacy and support to promote infant and maternal health in Kuwait and the Arabic speaking world.
 			</p>
-			<p class="text-xl mt-3">
+			<p class="text-xl mt-4">
 				Over the past 12 years we have become leaders in the field, by providing the important combination of
 				cutting-edge training and educational services for professionals, and support and educational services for
 				families.
 			</p>
 		</Card>
-
 		<Card underline class="md:w-96 h-full">
 			<h2 slot="header" class="h2 font-bold text-primary-500 text-center">Our Impact</h2>
 			<p class="text-xl">
@@ -25,9 +26,7 @@
 				professionals, who serve families in Kuwait and the region during the most important stages of their lives, as
 				they become parents, and raise the future generations.
 			</p>
-		</Card>
-		<Card class="card md:w-96 h-full">
-			<p class="text-xl">
+			<p class="text-xl mt-4">
 				To learn more and get involved, <a class="anchor" href="/contact">contact us</a>!
 			</p>
 		</Card>
