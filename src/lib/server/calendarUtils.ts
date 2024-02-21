@@ -61,7 +61,7 @@ export const getScheduledEvents = async () => {
 			throw new Error(`Failed to fetch event details. Status: ${scheduledEventsResponse.status}`);
 		}
 	}
-	const scheduledEventsResponseJson = await scheduledEventsResponse.json();
+	// const scheduledEventsResponseJson = await scheduledEventsResponse.json();
 };
 
 const extractTags = (text: string): string[] => {
@@ -74,7 +74,7 @@ const mapCalendlyEventType = (eventTypeData): Calendly.EventTypeData => {
 	return {
 		active: eventTypeData.active,
 		name: eventTypeData.name,
-		description: eventTypeData.description_plain,
+		description: eventTypeData.description_plain ?? '',
 		schedulingUrl: eventTypeData.scheduling_url,
 		internalNote: eventTypeData.internal_note ?? '',
 		tags: extractTags(eventTypeData.internal_note ?? ''),
